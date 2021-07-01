@@ -1,15 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 /* Couleurs Imposées */
 :root {
     --Blue: #0065FC;
     --LightBlue: #DEEBFF;
     --Grey: #F2F2F2;
 }
-
 /* Police Imposée */
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Raleway', Verdana, Tahoma, sans-serif;
     font-size: 1em;
     background-color: white;
+}
+/* accessibilié */
+.accessibility {
+    position: absolute;
+    left: -15000px;
+}
+
+/* header */
+#barreDeTitre {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+#logoReservia {
+    padding: 30px 0 0 50px;
+}
+#mainNav, #mainNav div {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+#mainNav a, a:active, a:visited, a:link {
+    text-decoration: none;
+}
+#mainNav a.ancre {
+    color: black;
+    font-weight: 500;
+    padding-top: 40px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 150px;
+    text-align: center;
+}
+#mainNav a.ancre:hover {
+    color: var(--Blue);
+    padding-top: 38px;
+    border-top: 2px solid var(--Blue);
+}
+#mainNav a.register {
+    color: var(--Blue);
+    font-weight: bold;
+    padding-left: 30px;
+}
+#mainNav a.register:hover {
+    text-shadow: 5px 5px var(--LightBlue);
+}
+/* Fin de Header  */
+
+#iconGps {
+    width: 15px;
+    height: 15px;
 }
