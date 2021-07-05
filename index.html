@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Reservia</title>
         <link rel="stylesheet" href="./CSS/normalize.css">
+        <link rel="stylesheet" href="./CSS/fontawesome-free-5.15.3-web/css/all.min.css"> 
         <link rel="stylesheet" href="./CSS/styles.css">
     </head>
     <body>
@@ -14,24 +15,56 @@
             <img src="/images/logo/Reservia.svg" alt="Logo Reservia" id="logoReservia">
             <nav id="mainNav">
                 <h1 class="accessibility">Menu principal</h1>
-                <p class="accessibility"><a href="#content" title="Passer directement au contenu de la page principal">Passer le menu</a> </p>
+                <p class="accessibility"><a href="#mainContent" title="Passer directement au contenu de la page principal">Passer le menu</a></p>
                 <a class="ancre" href="#hebergements">Hébergements</a>
                 <a class="ancre" href="#activites">Activités</a>
                 <a class="register" href="">S'inscrire</a>
             </nav>
         </header>
-        <section>
+        <!-- searchContent -->
+        <section id="searchContent">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre ville ou en pleine nature</p>
+            <!-- searchBar -->
             <div id="searchBar">
                 <form action="">
-                    <img src="/images/iconGps/map-marker-alt-solid.svg" alt="Icone GPS" id="iconGps">
+                    <i class="fas fa-map-marker-alt fa-lg"></i>
                     <input type="search" id="search" placeholder="Marseille, France">
                     <button type="submit">Rechercher</button>
                 </form>
             </div>
+            <!-- End searchBar -->
+            <!-- filter -->
+            <div id="buttonFilter">
+                <h2>Filtres</h2>
+                <div id="bfEco">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <p>Économique</p>
+                </div>
+                <div id="bfFamily">
+                    <i class="fas fa-child"></i>
+                    <p>Familial</p>
+                </div>
+                <div id="bfLove">
+                    <i class="fas fa-heart"></i>
+                    <p>Romantique</p>
+                </div>
+                <div id="bfAnimal">
+                    <i class="fas fa-dog"></i>
+                    <p>Animaux autorisés</p>
+                </div>
+            </div>
+            <!-- End filter -->
+            <!-- infoSearch -->
+            <div id="infoSearch">
+                <i class="fas fa-info"></i>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+            <!-- End infoSearch -->
         </section>
-        <section id="content">
+        <!-- End searchContent -->
+        <!-- mainContent -->
+        <section id="mainContent">
 
 
 
@@ -39,6 +72,7 @@
 
 
         </section>
+        <!-- End mainContent -->
         <footer>
             <div>
                 <p>A propos</p>
