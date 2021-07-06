@@ -193,16 +193,27 @@ input::placeholder {
 }
 /* End infoSearch */
 /* End searchContent */
+/* mainContent */
+.star {
+    color: var(--Blue);
+}
+.noStar {
+    color: var(--Grey);
+}
+#mainContent a {
+    color: black;
+}
+
+
+/* End mainContent */
+/* activityContent */
 
 
 
-
-
+/* End activityContent */
 /* footer */
 footer {
     display: grid;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     height: 218px;
