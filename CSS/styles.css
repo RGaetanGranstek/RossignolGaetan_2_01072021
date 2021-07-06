@@ -4,6 +4,7 @@
     --Blue: #0065FC;
     --LightBlue: #DEEBFF;
     --Grey: #F2F2F2;
+    --darkGrey: rgb(217,217,217);
 }
 /* Font Imposed */
 body {
@@ -18,21 +19,21 @@ body {
     position: absolute;
     left: -15000px;
 }
-
 /* header */
 #barreDeTitre {
+    margin-bottom: 30px;
     height: 100px;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 #logoReservia {
-    padding: 30px 0 0 50px;
+    padding: 50px 0 0 50px;
 }
 #mainNav, #mainNav div {
     margin: 0;
     box-sizing: border-box;
     height: 100%;
-    width: auto;
+    width: 460px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -50,6 +51,7 @@ body {
     text-align: center;
 }
 #mainNav a.ancre:hover {
+    width: 150px;
     color: var(--Blue);
     padding-top: 38px;
     border-top: 2px solid var(--Blue);
@@ -69,36 +71,40 @@ body {
     padding-left: 50px;
 }
 #searchContent h1 {
+    margin-bottom: 5px;
     font-size: 1.4em;
     font-weight: bold;
 }
 #searchContent p {
+    margin-top: 10px;
     font-weight: 500;
 }
 #searchBar, #buttonFilter, #buttonFilter div, #infoSearch, #infoSearch div {
     display: flex;
     align-items: center;
 }
-#searchBar i, input, button {
+#searchBar i, button {
     text-align: center;
     padding: 15px 0px 15px 0px;
 }
 #searchBar i {
-    position: relative;
-    left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     bottom: 1px;
     height: 20px;
     width: 50px;
     background-color: var(--Grey);
-    border-radius: 20px 0 0 20px;
+    border-radius: 15px 0 0 15px;
     text-align: center;
 }
 #searchBar input {
+    padding: 13px 0px 13px 20px;
     border: none;
-    border-top: solid 1px var(--Grey);
-    border-bottom: solid 1px var(--Grey);
-    width: 245px;
-    font-weight: 900;
+    border-top: solid 2px var(--Grey);
+    border-bottom: solid 2px var(--Grey);
+    width: 240px;
+    font-weight: 800;
 }
 input::placeholder {
     color: black;
@@ -112,29 +118,78 @@ input::placeholder {
     border: none;
     font-weight: 700;
     background-color: var(--Blue);
-    border-radius: 0 20px 20px 0;
+    border-radius: 0 15px 15px 0;
+}
+#searchBar button:hover {
+    cursor: pointer;
 }
 /* End searchBar */
 /* filter */
-
-
-
+#buttonFilter {
+    height: 50px;
+    margin: 30px 0 30px 0;
+}
+#buttonFilter p {
+    margin: 15px 0 15px 0;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+#buttonFilter p:first-child {
+    width: 60px;
+}
 #buttonFilter div {
-    border: solid 1px grey;
+    height: 46px;
+    margin-left: 25px;
+    border-top: solid 2px var(--darkGrey);
+    border-right: solid 2px var(--darkGrey);
+    border-bottom: solid 2px var(--darkGrey);
 }
 #buttonFilter div, #buttonFilter i {
     border-radius: 90px;
 }
+#buttonFilter div:first-of-type {
+    margin-left: 35px;
+}
+#buttonFilter div p {
+    margin: auto;
+    padding: 0 20px 0 13px;
+}
 #buttonFilter i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Blue);
+    height: 50px;
+    width: 50px;
     background-color: var(--LightBlue);
 }
-#infoSearch i, #buttonFilter i {
-    padding: 20px;
+#buttonFilter div:hover {
     color: var(--Blue);
+    border-top: solid 2px var(--Blue);
+    border-right: solid 2px var(--Blue);
+    border-bottom: solid 2px var(--Blue);
+    background-color: var(--darkGrey);
+    cursor: pointer;
+}
+#buttonFilter div:hover i {
+    color: var(--darkGrey);
+    background-color: var(--Blue);
 }
 /* End filter */
-
 /* infoSearch */
+#infoSearch i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 45px 45px;
+    border: solid 1px var(--darkGrey);
+    margin-right: 10px;
+    color: var(--Blue);
+}
+#infoSearch p {
+    margin: auto 0 auto 0;
+}
 /* End infoSearch */
-
 /* End searchContent */
