@@ -199,9 +199,19 @@ input::placeholder {
 .noStar {
     color: var(--darkGrey);
 }
-.mainLinkLeft, .mainLinkRight, .mainLinkLeft div, .mainLinkRight div, .mainLinkLeft h3, .mainLinkLeft p, .mainLinkLeft div, .mainLinkRight h3, .mainLinkRight p, .mainLinkRight div {
+.mainLinkLeft i, .mainLinkRight i {
+    font-size: 0.7rem;
+    margin: -1px;
+}
+#contentRight>div>i {
+    font-size: 1.5rem;
+}
+.mainLinkLeft, .mainLinkRight, .mainLinkLeft h3, .mainLinkLeft p, .mainLinkLeft div, .mainLinkRight h3, .mainLinkRight p, .mainLinkRight div {
     margin: 0;
     padding: 0;
+}
+.mainLinkLeft>a, .mainLinkLeft, .mainLinkRight a, .mainLinkLeft:hover, .mainLinkRight a:hover {
+    border-radius: 20px;
 }
 #mainContent {
     margin-top: 50px;
@@ -209,9 +219,16 @@ input::placeholder {
 }
 #mainContent h2 {
     font-size: 1.4em;
+    font-weight: 800;
+    margin: 25px 0 25px 0;
 }
-#mainContent h3, #mainContent p {
+#mainContent p {
     font-size: 0.9em;
+    font-weight: 600;
+}
+#mainContent h3 {
+    font-size: 1em;
+    font-weight: 800;
 }
 .mainLinkRight h3 {
     padding-bottom: 10px;
@@ -222,6 +239,7 @@ input::placeholder {
 #contentLeft>a {
     font-weight: 700;
     font-size: 1.2em;
+    max-width: 115px;
 }
 #contentRight {
     margin: 0 50px 0 40px;
@@ -243,56 +261,54 @@ input::placeholder {
     justify-content: space-between;
 }
 .mainLinkLeft {
-    border-radius: 20px 20px 0 0;
-    width: 250px;
+    width: 245px;
     height: 200px;
     margin: 0 auto 30px 0;
 }
-.mainLinkRight {
+.mainLinkRight a {
     width: 345px;
     height: 145px;
     margin-bottom: 30px;
-    border-radius: 20px 0 0 20px;
 }
-.mainLinkLeft, .mainLinkRight {
+.mainLinkLeft, .mainLinkRight a {
     display: flex;
+    box-shadow: 0px 0px 15px rgb(209, 208, 208);
 }
-.mainLinkLeft div {
-    border-radius: 0 0px 20px 20px;
-}
-.mainLinkRight>div {
+.mainLinkRight a>div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px 55px 15px 0;
+    padding: 20px 45px 15px 0;
 }
-.mainLinkLeft a>div:first-of-type, .mainLinkRight>div {
+.mainLinkLeft a>div {
+    padding: 10px 0 10px 0;
+}
+.mainLinkLeft a>div, .mainLinkRight a>div {
     padding-left: 15px;
 }
-.mainLinkRight, .mainLinkRight div, .mainLinkLeft a {
+.mainLinkLeft a, .mainLinkRight a {
     background-color: white;
-    border-radius: 20px;
 }
 #contentLeft img, #contentRight img {
     border: solid 5px white;
+    display: block;
+    object-fit: cover;
 }
 #contentLeft img {
     border-radius: 20px 20px 0 0;
-    height: 115px;
     width: 235px;
+    height: 115px;
 }
 #contentRight img {
     border-radius: 20px 0 0 20px;
     height: 134px;
-    width: 127px;
+    max-width: 127px;
+    min-width: 127px;
 }
-/* il reste le hover et le centrage des images à faire */ 
-
-
-
-
-
-
+.mainLinkLeft:hover, .mainLinkRight a:hover {
+    box-shadow: 0px 0px 10px var(--Blue);
+    cursor: pointer;
+}
 /* End mainContent */
 /* activityContent */
 
