@@ -293,16 +293,13 @@ input::placeholder {
     border: solid 5px white;
     display: block;
     object-fit: cover;
+    overflow: hidden;
 }
 #contentLeft img {
     border-radius: 20px 20px 0 0;
-    width: 235px;
-    height: 115px;
 }
 #contentRight img {
     border-radius: 20px 0 0 20px;
-    height: 134px;
-    max-width: 127px;
     min-width: 127px;
 }
 .mainLinkLeft:hover, .mainLinkRight a:hover {
@@ -311,9 +308,90 @@ input::placeholder {
 }
 /* End mainContent */
 /* activityContent */
-
-
-
+#activityContent {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+#activityContent H2 {
+    margin-top: 0;
+}
+#activityContent>div {
+    display: grid;
+    place-items: flex-start;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-bottom: 20px;
+}
+.one, .two, .three, .four, .five, .six {
+    position: relative;
+}
+.one {
+    height: 445px;
+    width: 305px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+.two {
+    height: 235px;
+    width: 305px;
+    grid-column: 2;
+    grid-row: 1;
+}
+.three {
+    height: 165px;
+    width: 305px;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: flex-end;
+}
+.four {
+    height: 445px;
+    width: 305px;
+    grid-column: 3;
+    grid-row: 1;
+}
+.fourB {
+    filter: brightness(125%);
+}
+.five {
+    height: 195px;
+    width: 305px;
+    grid-column: 4;
+    grid-row: 1;
+  }
+.six {
+    height: 205px;
+    width: 305px;
+    grid-column: 4;
+    grid-row: 1;
+    align-self: flex-end;
+  }
+.boxImg {
+    margin: 0 45px 40px 0;
+    box-shadow: 0px 0px 15px rgb(209, 208, 208);
+    border-radius: 20px;
+}
+.boxImg img {
+    display: block;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.boxImg div {
+    position: absolute;
+    bottom: 0;
+    height: 55px;
+    width: 305px;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+}
+.boxImg p {
+    padding: 5px 0 0 20px;
+    font-weight: 800;
+}
+#activityContent a:hover {
+    box-shadow: 0px 0px 10px var(--Blue);
+}
 /* End activityContent */
 /* footer */
 footer {
