@@ -296,9 +296,13 @@ input::placeholder {
     overflow: hidden;
 }
 #contentLeft img {
+    height: 115px; 
+    width: 235px;
     border-radius: 20px 20px 0 0;
 }
 #contentRight img {
+    height: 134px; 
+    width: 127px;
     border-radius: 20px 0 0 20px;
     min-width: 127px;
 }
@@ -325,43 +329,55 @@ input::placeholder {
 .one, .two, .three, .four, .five, .six {
     position: relative;
 }
-.one {
+.one, .one img {
     height: 445px;
     width: 305px;
+ }
+.one {
     grid-column: 1;
     grid-row: 1;
   }
-.two {
+.two, .two img {
     height: 235px;
     width: 305px;
+}
+.two {
     grid-column: 2;
     grid-row: 1;
 }
-.three {
+.three, .three img {
     height: 165px;
     width: 305px;
+}
+.three {
     grid-column: 2;
     grid-row: 1;
     align-self: flex-end;
 }
-.four {
+.four, .four img {
     height: 445px;
     width: 305px;
+}
+.four {
     grid-column: 3;
     grid-row: 1;
 }
 .fourB {
     filter: brightness(125%);
 }
-.five {
+.five, .five img {
     height: 195px;
     width: 305px;
+}
+.five {
     grid-column: 4;
     grid-row: 1;
   }
-.six {
+.six, .six img {
     height: 205px;
     width: 305px;
+}
+.six {
     grid-column: 4;
     grid-row: 1;
     align-self: flex-end;
