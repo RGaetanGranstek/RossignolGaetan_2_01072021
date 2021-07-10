@@ -9,7 +9,7 @@
 /* Font Imposed */
 body {
     margin: auto;
-    /* max-width: 1440px; */
+    max-width: 1440px;
     font-family: 'Raleway', Verdana, Tahoma, sans-serif;
     font-size: 1em;
     background-color: white;
@@ -272,7 +272,7 @@ input::placeholder {
 }
 .mainLinkLeft, .mainLinkRight a {
     display: flex;
-    box-shadow: 0px 0px 15px rgb(209, 208, 208);
+    box-shadow: 0px 0px 15px var(--darkGrey);
 }
 .mainLinkRight a>div {
     display: flex;
@@ -384,7 +384,7 @@ input::placeholder {
   }
 .boxImg {
     margin: 0 45px 40px 0;
-    box-shadow: 0px 0px 15px rgb(209, 208, 208);
+    box-shadow: 0px 0px 15px var(--darkGrey);
     border-radius: 20px;
 }
 .boxImg img {
