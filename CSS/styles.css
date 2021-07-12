@@ -30,14 +30,16 @@ body {
     margin-bottom: 30px;
     height: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 #logoReservia {
-    padding-top: 50px;
+    position: absolute;
+    left: 55px;
+    padding: 25px 0 25px 0;
 }
-#mainNav, #mainNav div {
+#mainNav {
     height: 100%;
-    width: 460px;
+    width: 320px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -51,21 +53,23 @@ a, a:active, a:visited, a:link {
     padding-top: 40px;
     box-sizing: border-box;
     height: 100%;
-    width: 150px;
+    width: 160px;
     text-align: center;
 }
 #mainNav a.ancre:hover {
-    width: 150px;
     color: var(--Blue);
     padding-top: 38px;
     border-top: 2px solid var(--Blue);
 }
-#mainNav a.register {
+#barreDeTitre a.register {
+    height: 100%;
+    width: auto;
+    text-align: center;
     color: var(--Blue);
     font-weight: bold;
-    padding-left: 30px;
+    padding: 40px 80px 0 20px;
 }
-#mainNav a.register:hover {
+#barreDeTitre a.register:hover {
     text-shadow: 0px 0px 15px var(--Blue);
 }
 /* End Header  */
@@ -82,38 +86,34 @@ a, a:active, a:visited, a:link {
 }
 #searchBar, #buttonFilter, #buttonFilter div, #infoSearch, #infoSearch div {
     display: flex;
-    align-items: center;
 }
-#searchBar i, #searchBar button {
+#searchBar>i, #searchBar button {
     text-align: center;
-    padding: 15px 0px 15px 0px;
 }
-#searchBar i {
+#searchBar>i {
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: 1px;
-    height: 20px;
+    padding: 16px 0px;
     width: 50px;
     background-color: var(--Grey);
     border-radius: 15px 0 0 15px;
-    text-align: center;
 }
 #searchBar input {
-    padding: 13px 0px 13px 20px;
+    padding: 13px 0px 13px 17px;
     border: none;
     border-top: solid 2px var(--Grey);
     border-bottom: solid 2px var(--Grey);
     width: 240px;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 1.2em;
 }
 input::placeholder {
     color: black;
-    font: bold;
 }
 #searchBar button {
     position: relative;
+    padding: 15px 0px;
     right: 5px;
     width: 135px;
     color: white;
@@ -135,7 +135,7 @@ input::placeholder {
 #buttonFilter p {
     margin: 15px 0 15px 10px;
     font-size: 1.1em;
-    font-weight: 800;
+    font-weight: 700;
 }
 #buttonFilter p:first-child {
     width: 60px;
@@ -150,7 +150,7 @@ input::placeholder {
 #buttonFilter div, #buttonFilter i {
     border-radius: 90px;
 }
-#buttonFilter div p {
+#bfEco p, #bfFamily p ,#bfLove p, #bfAnimal p {
     margin: auto;
     padding: 0 20px 0 13px;
 }
@@ -159,7 +159,7 @@ input::placeholder {
     align-items: center;
     justify-content: center;
     color: var(--Blue);
-    height: 50px;
+    height: 46px;
     width: 50px;
     background-color: var(--LightBlue);
 }
@@ -214,12 +214,12 @@ input::placeholder {
     border-radius: 20px;
 }
 #mainContent {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
 }
 #mainContent h2 {
     font-size: 1.4em;
-    font-weight: 800;
+    font-weight: 700;
     margin: 25px 0 25px 0;
 }
 #mainContent p {
@@ -228,7 +228,7 @@ input::placeholder {
 }
 #mainContent h3 {
     font-size: 1em;
-    font-weight: 800;
+    font-weight: 700;
 }
 .mainLinkRight h3 {
     padding-bottom: 10px;
@@ -281,7 +281,10 @@ input::placeholder {
     padding: 20px 45px 15px 0;
 }
 .mainLinkLeft a>div {
-    padding: 10px 0 10px 0;
+    padding: 5px 0 5px 0;
+}
+.mainLinkLeft p {
+    padding: 5px 0 5px 0;
 }
 .mainLinkLeft a>div, .mainLinkRight a>div {
     padding-left: 15px;
@@ -414,7 +417,6 @@ footer {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 218px;
     background-color: var(--Grey);
 }
 footer h3 {
@@ -424,7 +426,7 @@ footer div:first-child {
     margin: 50px auto auto 50px;
 }
 footer div {
-    margin-top: 50px;
+    margin: 50px auto auto 20px;
 }
 footer div ul {
     padding: 0;
@@ -439,3 +441,145 @@ footer div ul li a {
     color: black;
 }
 /* End footer */
+
+
+
+/* mobile */
+@media only screen and (max-width: 375px) {
+    /* header */
+    #barreDeTitre {
+        height: 130px;
+        padding: 0;
+        margin: 0;
+    }
+    #mainNav {
+        left: 0;
+        top: 82px;
+        width: 375px;
+        height: 48px;
+        position: absolute;
+    }
+    #logoReservia {
+        left: 0;
+        padding: 22px 0 18px 20px;
+    }
+    #barreDeTitre a.register {
+        height: 65px;
+        padding: 40px 20px 0 0;
+    }
+    #mainNav a.ancre {
+        width: 100%;
+        height: 48px;
+        padding: 15px 0 15px 0;
+        border-bottom: 3px solid var(--Grey);
+    }
+    #mainNav a.ancre:hover {
+        padding: 15px 0 15px 0;
+        border-bottom: 3px solid var(--Blue);
+        border-top: 0px solid var(--Blue);
+    }
+    /* End header */
+    /* searchContent */
+    /* searchBar */
+    #searchContent {
+        padding: 35px 0 0 20px;
+    }
+    #searchContent h1 {
+        width: 335px;
+        font-size: 1.35em;
+        margin: 0;
+    }
+    #searchContent p {
+        margin: 15px 0;
+    }
+    .buttonDesktop {
+        display: none;
+    }
+    #searchBar {
+        padding: 20px 0;
+    }
+    #searchBar input {
+        width: 245px;
+        font-size: 1.1em;
+    }
+    #searchBar button {
+        left: -15px;
+        bottom: -2px;
+        border-radius: 15px;
+        width: 50px;
+        height: 50px;
+    }
+    /* End searchBar */
+    /* filter */
+    #buttonFilter p:first-child {
+        margin-bottom: 0;
+        width: 300px;
+    }
+    #buttonFilter {
+        margin: 0 0 20px 0;
+        height: 240px;
+        flex-wrap: wrap;
+    }
+    #buttonFilter i {
+        height: 46px;
+    }
+    #buttonFilter div {
+        margin: 0 10px 0 0;
+    }
+    #buttonFilter div p {
+        font-size: 1em;
+    }
+    #bfLove p {
+        padding: 0 13px;
+    }
+    #bfAnimal p {
+        padding: 0 15px 0 13px;
+    }
+    /* End filter */
+    /* infoSearch */
+    #infoSearch p {
+        margin: 0
+    }
+    #infoSearch i {
+        width: 25px;
+    }
+    /* End infoSearch */
+    /* End searchContent */
+    
+    /* mainContent */
+    #mainContent, #activityContent {
+        display: none;
+    }
+    /* End mainContent */
+    /* activityContent */
+    
+    /* End activityContent */
+    /* footer */
+    footer {
+        display: inherit;
+    }
+    footer div:first-child {
+        padding: 50px 0 12px 30px;
+        margin: 50px 0 0 0;
+    }
+    footer div {
+        padding: 12px 0 0 30px;
+        margin: 0;
+    }
+    footer div:last-of-type {
+        padding-bottom: 19px;
+    }
+    /* End footer */
+}
+/*End mobile*/
+/* tablet */
+@media only screen and (min-width: 376px) and (max-device-width : 1024px) {
+}
+/* End tablet */
+/* desktop */
+@media only screen and (min-width: 1025px) {
+    .buttonMobile {
+        display: none;
+    }
+}
+/* End desktop */
