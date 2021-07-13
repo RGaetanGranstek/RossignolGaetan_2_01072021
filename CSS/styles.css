@@ -30,12 +30,12 @@ body {
     margin-bottom: 30px;
     height: 100px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 #logoReservia {
-    position: absolute;
-    left: 55px;
-    padding: 25px 0 25px 0;
+    /* position: absolute;
+    left: 55px; */
+    padding: 25px 798px 25px 0;
 }
 #mainNav {
     height: 100%;
@@ -220,7 +220,7 @@ input::placeholder {
 #mainContent h2 {
     font-size: 1.4em;
     font-weight: 700;
-    margin: 25px 0 25px 0;
+    margin: 25px 0;
 }
 #mainContent p {
     font-size: 0.9em;
@@ -240,6 +240,9 @@ input::placeholder {
     font-weight: 700;
     font-size: 1.2em;
     max-width: 115px;
+}
+#contentLeft>a:hover {
+    text-decoration: underline;
 }
 #contentRight {
     margin: 0 50px 0 40px;
@@ -278,16 +281,13 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px 45px 15px 0;
+    padding: 20px 45px 15px 15px;
 }
 .mainLinkLeft a>div {
-    padding: 5px 0 5px 0;
+    padding: 5px 0 5px 15px;
 }
 .mainLinkLeft p {
     padding: 5px 0 5px 0;
-}
-.mainLinkLeft a>div, .mainLinkRight a>div {
-    padding-left: 15px;
 }
 .mainLinkLeft a, .mainLinkRight a {
     background-color: white;
@@ -419,6 +419,9 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--Grey);
 }
+footer a:hover {
+    text-decoration: underline;
+}
 footer h3 {
     margin: 0;
 }
@@ -545,14 +548,63 @@ footer div ul li a {
     }
     /* End infoSearch */
     /* End searchContent */
-    
     /* mainContent */
+    #mainContent {
+        flex-flow: column-reverse;
+    }
+    #contentRight {
+        margin: 0 0 30px 0;
+        padding: 10px 20px 30px 20px;
+        border-radius: 0;
+    }
     #mainContent, #activityContent {
-        display: none;
+        padding: 0;
+    }
+    .mainLinkRight {
+        align-self: center;
+    }
+    .mainLinkRight a {
+        margin-bottom: 10px;
+        width: 335px;
+    }
+    .mainLinkRight h3 {
+        font-size: 0.9em;
+    }
+    .mainLinkRight a>div {
+        padding: 20px 35px 15px 10px;
+    }
+    #contentLeft {
+        padding: 0 20px;
+        background-color: white;
+    } 
+    .mainLinkLeft {
+        width: 345px;
+        margin: 0 auto 30px auto;
+    }
+    #contentLeft img {
+        width: 335px;
     }
     /* End mainContent */
     /* activityContent */
-    
+    #activityContent {
+        padding: 35px 20px 0 20px;
+    }
+    #activityContent>div {
+        display: contents;
+    }
+    #activityContent h2 {
+        font-size: 1.4em;
+        font-weight: 700;
+        margin: 25px 0;
+    }
+    .one, .one img, .two, .two img, .three, .three img,.four, .four img, .five, .five img, .six, .six img {
+        width: 335px;
+        height: 180px;
+        align-self: inherit;
+    }
+    .boxImg div {
+        width: 335px;
+    }
     /* End activityContent */
     /* footer */
     footer {
@@ -560,7 +612,7 @@ footer div ul li a {
     }
     footer div:first-child {
         padding: 50px 0 12px 30px;
-        margin: 50px 0 0 0;
+        margin: 0;
     }
     footer div {
         padding: 12px 0 0 30px;
