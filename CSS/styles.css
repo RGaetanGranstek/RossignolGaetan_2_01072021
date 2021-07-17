@@ -30,14 +30,16 @@ body {
     margin-bottom: 30px;
     height: 100px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+}
+#barreDeTitre div {
+    display: flex;
 }
 #logoReservia {
-    padding: 25px 798px 25px 0;
+    padding: 25px 0;
 }
 #mainNav {
     height: 100%;
-    width: 320px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -127,25 +129,28 @@ input::placeholder {
 /* End searchBar */
 /* filter */
 #buttonFilter {
-    height: 50px;
-    margin: 30px 0 30px 0;
+    flex-wrap: wrap;
+    margin: 30px auto;
 }
 #buttonFilter p {
-    margin: 15px 0 15px 10px;
+    margin: 15px 25px 15px 10px;
     font-size: 1.1em;
     font-weight: 700;
 }
 #buttonFilter p:first-child {
     width: 60px;
 }
-#buttonFilter div {
+#buttonFilter>div {
+    flex-wrap: wrap;
+}
+#buttonFilter div div {
     height: 46px;
-    margin-left: 25px;
+    margin-right: 25px;
     border-top: solid 2px var(--darkGrey);
     border-right: solid 2px var(--darkGrey);
     border-bottom: solid 2px var(--darkGrey);
 }
-#buttonFilter div, #buttonFilter i {
+#buttonFilter div div, #buttonFilter i {
     border-radius: 90px;
 }
 #bfEco p, #bfFamily p ,#bfLove p, #bfAnimal p {
@@ -161,14 +166,14 @@ input::placeholder {
     width: 50px;
     background-color: var(--LightBlue);
 }
-#buttonFilter div:hover {
+#buttonFilter div div:hover {
     color: var(--Blue);
     border-top: solid 2px var(--Blue);
     border-right: solid 2px var(--Blue);
     border-bottom: solid 2px var(--Blue);
     background-color: var(--Grey);
 }
-#buttonFilter div:hover i {
+#buttonFilter div div:hover i {
     color: var(--Grey);
     background-color: var(--Blue);
 }
@@ -180,7 +185,7 @@ input::placeholder {
     justify-content: center;
     height: 20px;
     width: 20px;
-    border-radius: 45px 45px;
+    border-radius: 45px;
     border: solid 1px var(--darkGrey);
     margin-right: 10px;
     color: var(--Blue);
@@ -443,8 +448,128 @@ footer div ul li a {
 }
 /* End footer */
 
+
+
+
+
+/* Mobile low resolution */
+@media screen and (max-width: 320px) {
+    /* searchContent */
+    /* searchBar */
+    #searchBar input {
+        width: 190px;
+        font-size: 1.1em;
+    }
+    /* End searchBar */
+    /* filter */
+    #buttonFilter div a {
+        margin-bottom: 15px;
+    }
+    /* End filter */
+    /* End searchContent */
+    /* mainContent */
+    #contentRight {
+        padding: 5px;
+    }
+    #contentRight img {
+        width: auto;
+    }
+    .mainLinkRight a {
+        width: auto;
+    }
+    .mainLinkLeft {
+        width: 280px;
+    }
+    .mainLinkLeft a {
+        width: 280px;
+    }
+    #contentLeft img {
+        width: 270px;
+    }
+    /* End mainContent */
+}
+/* End mobile low resolution */
 /* mobile */
-@media only screen and (max-width: 375px) {
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    /* searchContent */
+    /* searchBar */
+    #searchBar input {
+        width: 245px;
+        font-size: 1.1em;
+    }
+    /* End searchBar */
+    /* filter */
+    #buttonFilter div {
+        height: 190px;
+    }
+    /* End filter */
+    /* End searchContent */
+    /* mainContent */
+    #contentRight {
+        padding: 10px 20px 30px 20px;
+    }
+    .mainLinkLeft {
+        width: 335px;
+    }
+    .mainLinkLeft a {
+        width: 335px;
+    }
+    #contentLeft img {
+        width: 325px;
+    }
+    /* End mainContent */
+}
+@media screen and (max-width: 480px) {
+    /* searchContent */
+    /* searchBar */
+    #searchBar {
+        padding: 20px 0 0 0;
+    }
+    #searchContent {
+        padding: 35px 0 0 20px;
+    }
+    #searchContent h1 {
+        width: 100%;
+        font-size: 1.35em;
+        margin: 0;
+    }
+    #searchContent p {
+        margin: 15px 0;
+    }
+    .buttonDesktop {
+        display: none;
+    }
+    #searchBar button {
+        left: -15px;
+        bottom: -2px;
+        border-radius: 15px;
+        width: 50px;
+        height: 50px;
+    }
+    /* End searchBar */
+    /* End searchContent */
+    /* mainContent */
+    .mainLinkLeft {
+        margin: 0 auto 30px auto;
+    }
+    /* End mainContent */
+    /* footer */
+    footer {
+        display: inherit;
+    }
+    footer div {
+        padding: 12px 0 0 30px;
+        margin: 0;
+    }
+    /* End footer */
+}
+/*End mobile*/
+/* Tablet low resolution */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+}
+/* End tablet low resolution */
+/* tablet */
+@media screen and (max-device-width : 1024px) {
     /* header */
     #barreDeTitre {
         height: 130px;
@@ -454,7 +579,7 @@ footer div ul li a {
     #mainNav {
         left: 0;
         top: 82px;
-        width: 375px;
+        width: 100%;
         height: 48px;
         position: absolute;
     }
@@ -483,53 +608,22 @@ footer div ul li a {
     }
     /* End header */
     /* searchContent */
-    /* searchBar */
-    #searchContent {
-        padding: 35px 0 0 20px;
-    }
-    #searchContent h1 {
-        width: 335px;
-        font-size: 1.35em;
-        margin: 0;
-    }
-    #searchContent p {
-        margin: 15px 0;
-    }
-    .buttonDesktop {
-        display: none;
-    }
-    #searchBar {
-        padding: 20px 0;
-    }
-    #searchBar input {
-        width: 245px;
-        font-size: 1.1em;
-    }
-    #searchBar button {
-        left: -15px;
-        bottom: -2px;
-        border-radius: 15px;
-        width: 50px;
-        height: 50px;
-    }
-    /* End searchBar */
     /* filter */
     #buttonFilter p:first-child {
-        margin-bottom: 0;
-        width: 300px;
+        margin: 35px 0 0 0;
+        width: 100%;
+        height: 40px;
     }
     #buttonFilter {
         margin: 0 0 20px 0;
-        height: 240px;
-        flex-wrap: wrap;
     }
     #buttonFilter i {
         height: 46px;
     }
-    #buttonFilter div {
+    #buttonFilter div div {
         margin: 0 10px 0 0;
     }
-    #buttonFilter div p {
+    #buttonFilter div div p {
         font-size: 1em;
     }
     #bfLove p {
@@ -554,7 +648,6 @@ footer div ul li a {
     }
     #contentRight {
         margin: 0 0 30px 0;
-        padding: 10px 20px 30px 20px;
         border-radius: 0;
     }
     #mainContent, #activityContent {
@@ -565,7 +658,7 @@ footer div ul li a {
     }
     .mainLinkRight a {
         margin-bottom: 10px;
-        width: 335px;
+        width: 100;
     }
     .mainLinkRight h3 {
         font-size: 0.9em;
@@ -576,13 +669,6 @@ footer div ul li a {
     #contentLeft {
         padding: 0 20px;
         background-color: white;
-    } 
-    .mainLinkLeft {
-        width: 345px;
-        margin: 0 auto 30px auto;
-    }
-    #contentLeft img {
-        width: 335px;
     }
     /* End mainContent */
     /* activityContent */
@@ -598,24 +684,17 @@ footer div ul li a {
         margin: 25px 0;
     }
     .one, .one img, .two, .two img, .three, .three img,.four, .four img, .five, .five img, .six, .six img {
-        width: 335px;
+        width: 100%;
         height: 180px;
         align-self: inherit;
     }
     .boxImg div {
-        width: 335px;
+        width: 100%;
     }
     /* End activityContent */
     /* footer */
-    footer {
-        display: inherit;
-    }
     footer div:first-child {
         padding: 50px 0 12px 30px;
-        margin: 0;
-    }
-    footer div {
-        padding: 12px 0 0 30px;
         margin: 0;
     }
     footer div:last-of-type {
@@ -623,15 +702,11 @@ footer div ul li a {
     }
     /* End footer */
 }
-/*End mobile*/
-/* tablet */
-@media only screen and (min-width: 376px) and (max-device-width : 1024px) {
-}
 /* End tablet */
-/* desktop */
-@media only screen and (min-width: 1025px) {
+/* tablet and desktop */
+@media only screen and (min-width: 768px) {
     .buttonMobile {
         display: none;
     }
 }
-/* End desktop */
+/* End tablet and desktop */
