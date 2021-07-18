@@ -28,7 +28,7 @@ body {
 /* header */
 #barreDeTitre {
     margin-bottom: 30px;
-    height: 100px;
+    /* height: 100px; */
     display: flex;
     justify-content: space-between;
 }
@@ -36,7 +36,7 @@ body {
     display: flex;
 }
 #logoReservia {
-    padding: 25px 0;
+    padding: 45px 0 5px 0;
 }
 #mainNav {
     height: 100%;
@@ -219,10 +219,15 @@ input::placeholder {
     margin-top: 40px;
     display: flex;
 }
-#mainContent h2 {
+#contentLeft h2 {
     font-size: 1.4em;
     font-weight: 700;
     margin: 25px 0 25px 40px;
+}
+#contentRight h2 {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin: 25px 0;
 }
 #mainContent p {
     font-size: 0.9em;
@@ -330,6 +335,7 @@ input::placeholder {
     padding-top: 60px;
 }
 #activityContent H2 {
+    font-size: 1.4em;
     margin-top: 0;
 }
 #activityContent>div {
@@ -484,7 +490,7 @@ footer div ul li a {
     }
     /* End mainContent */
 }
-@media screen and (min-width: 321px) and (max-width: 570px) {
+@media screen and (min-width: 340px) and (max-width: 590px) {
     /* mainContent */
     .mainLinkLeft, .mainLinkLeft a {
         width: 335px;
@@ -567,10 +573,10 @@ footer div ul li a {
     #activityContent>div {
         display: contents;
     }
-    #activityContent h2 {
+    #contentLeft h2 {
         font-size: 1.4em;
         font-weight: 700;
-        margin: 25px 0;
+        margin: 25px 0 25px 20px;
     }
     .one, .one img, .two, .two img, .three, .three img,.four, .four img, .five, .five img, .six, .six img {
         width: 100%;
