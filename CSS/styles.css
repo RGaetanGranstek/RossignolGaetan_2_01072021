@@ -104,7 +104,6 @@ a, a:active, a:visited, a:link {
     border: none;
     border-top: solid 2px var(--Grey);
     border-bottom: solid 2px var(--Grey);
-    width: 240px;
     font-weight: 700;
     font-size: 1.2em;
 }
@@ -223,7 +222,7 @@ input::placeholder {
 #mainContent h2 {
     font-size: 1.4em;
     font-weight: 700;
-    margin: 25px 0;
+    margin: 25px 0 25px 40px;
 }
 #mainContent p {
     font-size: 0.9em;
@@ -243,6 +242,7 @@ input::placeholder {
     font-weight: 700;
     font-size: 1.2em;
     max-width: 115px;
+    padding: 5px 0 0 40px;
 }
 #contentLeft>a:hover {
     text-decoration: underline;
@@ -258,18 +258,24 @@ input::placeholder {
     background-color: var(--Grey);
 }
 #contentLeft {
-    padding: 20px 0 0 40px;
+    padding-top: 20px;
 }
 #contentLeft>div:first-of-type, #contentRight>div:first-of-type {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+}
+#contentLeft>div:first-of-type {
+    justify-content: space-around;
+    padding: 0 20px;
+}
+#contentRight>div:first-of-type {
     justify-content: space-between;
 }
 .mainLinkLeft {
     width: 245px;
     height: 200px;
-    margin: 0 auto 30px 0;
+    margin-bottom: 30px;
 }
 .mainLinkRight a {
     width: 345px;
@@ -278,7 +284,7 @@ input::placeholder {
 }
 .mainLinkLeft, .mainLinkRight a {
     display: flex;
-    box-shadow: 0px 0px 15px var(--darkGrey);
+    box-shadow: 0px 0px 20px var(--darkGrey);
 }
 .mainLinkRight a>div {
     display: flex;
@@ -329,81 +335,65 @@ input::placeholder {
 #activityContent>div {
     display: grid;
     place-items: flex-start;
-    grid-template-columns: 25% 25% 25% 25%;
     margin-bottom: 20px;
 }
 .one, .two, .three, .four, .five, .six {
     position: relative;
+    grid-row: 1;
 }
-.one, .one img {
+.one, .one img, .four, .four img {
     height: 445px;
-    width: 305px;
  }
+ .one, .two, .three, .four, .five, .six, .one img, .two img, .three img, .four img, .five img, .six img, .boxImg div {
+    width: 305px;
+}
 .one {
     grid-column: 1;
-    grid-row: 1;
   }
 .two, .two img {
     height: 235px;
-    width: 305px;
 }
-.two {
+.two, .three {
     grid-column: 2;
-    grid-row: 1;
+}
+.three {
+    align-self: flex-end;
 }
 .three, .three img {
     height: 165px;
-    width: 305px;
-}
-.three {
-    grid-column: 2;
-    grid-row: 1;
-    align-self: flex-end;
-}
-.four, .four img {
-    height: 445px;
-    width: 305px;
 }
 .four {
     grid-column: 3;
-    grid-row: 1;
 }
 .fourB {
     filter: brightness(125%);
 }
 .five, .five img {
     height: 195px;
-    width: 305px;
 }
-.five {
+.five, .six {
     grid-column: 4;
-    grid-row: 1;
   }
+.six {
+      align-self: flex-end;
+    }
 .six, .six img {
     height: 205px;
-    width: 305px;
 }
-.six {
-    grid-column: 4;
-    grid-row: 1;
-    align-self: flex-end;
-  }
 .boxImg {
-    margin: 0 45px 40px 0;
+    margin-bottom: 40px;
     box-shadow: 0px 0px 15px var(--darkGrey);
     border-radius: 20px;
 }
 .boxImg img {
     display: block;
     object-fit: cover;
-    overflow: hidden;
     border-radius: 20px;
 }
 .boxImg div {
     position: absolute;
     bottom: 0;
     height: 55px;
-    width: 305px;
     background-color: white;
     border-radius: 0 0 20px 20px;
 }
@@ -453,34 +443,22 @@ footer div ul li a {
 
 
 /* Mobile low resolution */
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 374px) {
     /* searchContent */
     /* searchBar */
     #searchBar input {
-        width: 190px;
-        font-size: 1.1em;
+        font-size: 0.9em;
     }
     /* End searchBar */
-    /* filter */
-    #buttonFilter div a {
-        margin-bottom: 15px;
-    }
-    /* End filter */
     /* End searchContent */
     /* mainContent */
     #contentRight {
         padding: 5px;
     }
-    #contentRight img {
+    #contentRight img, .mainLinkRight a {
         width: auto;
     }
-    .mainLinkRight a {
-        width: auto;
-    }
-    .mainLinkLeft {
-        width: 280px;
-    }
-    .mainLinkLeft a {
+    .mainLinkLeft, .mainLinkLeft a {
         width: 280px;
     }
     #contentLeft img {
@@ -490,54 +468,50 @@ footer div ul li a {
 }
 /* End mobile low resolution */
 /* mobile */
-@media screen and (min-width: 321px) and (max-width: 480px) {
-    /* searchContent */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+/* searchContent */
     /* searchBar */
-    #searchBar input {
-        width: 245px;
-        font-size: 1.1em;
+    #searchContent h1 {
+        padding-right: 60px;
     }
     /* End searchBar */
-    /* filter */
-    #buttonFilter div {
-        height: 190px;
-    }
-    /* End filter */
     /* End searchContent */
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
     /* mainContent */
     #contentRight {
         padding: 10px 20px 30px 20px;
     }
-    .mainLinkLeft {
-        width: 335px;
-    }
-    .mainLinkLeft a {
+    /* End mainContent */
+}
+@media screen and (min-width: 321px) and (max-width: 570px) {
+    /* mainContent */
+    .mainLinkLeft, .mainLinkLeft a {
         width: 335px;
     }
     #contentLeft img {
         width: 325px;
     }
-    /* End mainContent */
 }
 @media screen and (max-width: 480px) {
     /* searchContent */
     /* searchBar */
+    .buttonDesktop {
+        display: none;
+    }
     #searchBar {
+        justify-content: flex-start;
         padding: 20px 0 0 0;
     }
     #searchContent {
         padding: 35px 0 0 20px;
     }
     #searchContent h1 {
-        width: 100%;
-        font-size: 1.35em;
         margin: 0;
+        font-size: 1.35em;
     }
     #searchContent p {
         margin: 15px 0;
-    }
-    .buttonDesktop {
-        display: none;
     }
     #searchBar button {
         left: -15px;
@@ -565,32 +539,171 @@ footer div ul li a {
 }
 /*End mobile*/
 /* Tablet low resolution */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
+    /* mainContent */
+    #contentRight {
+        margin: 0 0 30px 0;
+        border-radius: 0;
+    }
+    #mainContent, #activityContent {
+        padding: 0;
+    }
+    .mainLinkRight {
+        align-self: center;
+    }
+    .mainLinkRight a {
+        margin-bottom: 10px;
+    }
+    .mainLinkRight h3 {
+        font-size: 0.9em;
+    }
+    .mainLinkRight a>div {
+        padding: 20px 35px 15px 10px;
+    }
+    /* activityContent */
+    #activityContent {
+        padding: 35px 20px 0 20px;
+    }
+    #activityContent>div {
+        display: contents;
+    }
+    #activityContent h2 {
+        font-size: 1.4em;
+        font-weight: 700;
+        margin: 25px 0;
+    }
+    .one, .one img, .two, .two img, .three, .three img,.four, .four img, .five, .five img, .six, .six img {
+        width: 100%;
+        height: 180px;
+        align-self: inherit;
+    }
+    .boxImg div {
+        width: 100%;
+    }
+    /* End activityContent */
+}
+@media screen and (min-width: 480px) and (max-width: 1023px) {
+    /* mainContent */
+    #contentRight {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 20px 20px 0 20px;
+        justify-content: space-around;
+    }
+    .mainLinkRight a {
+        width: 320px;
+    }
+    #contentRight>div:first-of-type {
+        width: 100%;
+    }
+    #mainContent {
+        padding: 0 20px;
+    }
+    /* End mainContent */
 }
 /* End tablet low resolution */
 /* tablet */
-@media screen and (max-device-width : 1024px) {
+@media screen and (max-width: 1023px){
+    /* mainContent */
+    #mainContent {
+        flex-flow: column-reverse;
+    }
+    #contentLeft {
+        background-color: white;
+    }
+    #contentRight {
+        margin: 0 auto;
+    }
+    /* End mainContent */
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    /* mainContent */
+    #mainContent {
+        display: grid;
+        padding: 0 5%;
+        grid-template-columns: 60% 40%;
+    }
+    #contentLeft {
+        padding-bottom: 40px;
+    }
+    #contentRight {
+        margin: 0 0 0 5%;
+        padding: 20px;
+        justify-self: start;
+    }
+    /* End mainContent */
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    /* activityContent */
+    .one, .two, .three, .four, .five {
+        width: 90%;
+    }
+    .six {
+        width: 97%;
+    }
+    .one, .two, .three, .four, .five {
+        position: relative;
+        grid-row: 1;
+    }
+    .one img, .two img, .three img, .four img, .five img, .six img, .boxImg div {
+        width: 100%;
+    }
+    .one, .one img {
+        height: 445px;
+    }
+    .two, .two img, .three, .three img, .four, .four img, .five, .five img {
+        height: 200px;
+    }
+    .one {
+        grid-column: 1;
+    }
+    .two, .three {
+        grid-column: 2;
+    }
+    .three, .five {
+        align-self: flex-end;
+    }
+    .four, .five {
+        grid-column: 3;
+    }
+    .fourB {
+        filter: brightness(125%);
+    }
+    .six {
+        grid-column: 1 / span 4;
+        grid-row: 2;
+    }
+    .boxImg p {
+        text-align: center;
+        justify-content: center;
+        padding: 0;
+        font-weight: 600;
+    }
+    /* End activityContent */
+}
+@media screen and (max-width : 1024px) {
     /* header */
     #barreDeTitre {
         height: 130px;
         padding: 0;
         margin: 0;
     }
+    #mainNav, #logoReservia, #barreDeTitre a.register{
+        position: absolute;
+    }
     #mainNav {
         left: 0;
         top: 82px;
         width: 100%;
         height: 48px;
-        position: absolute;
     }
     #logoReservia {
-        position: absolute;
         left: 55px;
         left: 0;
         padding: 22px 0 18px 20px;
     }
     #barreDeTitre a.register {
-        position: absolute;
         height: 65px;
         right: 20px;
         padding: 40px 0 0 20px;
@@ -621,7 +734,7 @@ footer div ul li a {
         height: 46px;
     }
     #buttonFilter div div {
-        margin: 0 10px 0 0;
+        margin: 0 10px 15px 0;
     }
     #buttonFilter div div p {
         font-size: 1em;
@@ -642,56 +755,6 @@ footer div ul li a {
     }
     /* End infoSearch */
     /* End searchContent */
-    /* mainContent */
-    #mainContent {
-        flex-flow: column-reverse;
-    }
-    #contentRight {
-        margin: 0 0 30px 0;
-        border-radius: 0;
-    }
-    #mainContent, #activityContent {
-        padding: 0;
-    }
-    .mainLinkRight {
-        align-self: center;
-    }
-    .mainLinkRight a {
-        margin-bottom: 10px;
-        width: 100;
-    }
-    .mainLinkRight h3 {
-        font-size: 0.9em;
-    }
-    .mainLinkRight a>div {
-        padding: 20px 35px 15px 10px;
-    }
-    #contentLeft {
-        padding: 0 20px;
-        background-color: white;
-    }
-    /* End mainContent */
-    /* activityContent */
-    #activityContent {
-        padding: 35px 20px 0 20px;
-    }
-    #activityContent>div {
-        display: contents;
-    }
-    #activityContent h2 {
-        font-size: 1.4em;
-        font-weight: 700;
-        margin: 25px 0;
-    }
-    .one, .one img, .two, .two img, .three, .three img,.four, .four img, .five, .five img, .six, .six img {
-        width: 100%;
-        height: 180px;
-        align-self: inherit;
-    }
-    .boxImg div {
-        width: 100%;
-    }
-    /* End activityContent */
     /* footer */
     footer div:first-child {
         padding: 50px 0 12px 30px;
@@ -704,7 +767,7 @@ footer div ul li a {
 }
 /* End tablet */
 /* tablet and desktop */
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
     .buttonMobile {
         display: none;
     }
