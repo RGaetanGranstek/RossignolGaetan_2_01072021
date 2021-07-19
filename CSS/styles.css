@@ -509,7 +509,7 @@ footer div ul li a {
 @media screen and (min-width: 321px) and (max-width: 480px) {
     /* mainContent */
     #contentRight {
-        padding: 10px 20px 30px 20px;
+        padding: 10px 5px 30px 5px;
     }
     /* End mainContent */
 }
@@ -641,10 +641,6 @@ footer div ul li a {
     #contentLeft {
         background-color: white;
     }
-    #contentRight {
-        margin: 0;
-        padding: 0 20px;
-    }
     /* End mainContent */
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
@@ -666,7 +662,7 @@ footer div ul li a {
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
     /* activityContent */
-    #mainContent, #activityContent {
+    #mainContent {
         padding: 0 3%;
     }
     .one, .two, .three, .four, .five {
