@@ -7,6 +7,11 @@
     --darkGrey: rgb(217,217,217);
 }
 /* Font Imposed */
+/* transition */
+section {
+    transition: all 1s ease;
+}
+/* End transition */
 body {
     margin: auto;
     max-width: 1440px;
@@ -450,14 +455,16 @@ footer div ul li a {
 
 
 /* Mobile low resolution */
-@media screen and (min-width: 320px) and (max-width: 374px) {
+@media screen and (max-width: 370px) {
     /* searchContent */
     /* searchBar */
     #searchBar input {
-        font-size: 0.9em;
+        width: 75%;
     }
     /* End searchBar */
     /* End searchContent */
+}
+@media screen and (min-width: 320px) and (max-width: 375px) {
     /* mainContent */
     #contentRight {
         padding: 5px;
@@ -471,7 +478,19 @@ footer div ul li a {
     #contentLeft img {
         width: 270px;
     }
+    .mainLinkRight a {
+        width: 100%;
+    }
     /* End mainContent */
+}
+@media screen and (min-width: 370px) and (max-width: 390px) {
+    /* searchContent */
+    /* searchBar */
+    #searchBar input {
+        width: 82%;
+    }
+    /* End searchBar */
+    /* End searchContent */
 }
 /* End mobile low resolution */
 /* mobile */
@@ -503,6 +522,9 @@ footer div ul li a {
 @media screen and (max-width: 480px) {
     /* searchContent */
     /* searchBar */
+    form {
+        width: 100%;
+    }
     .buttonDesktop {
         display: none;
     }
@@ -511,7 +533,7 @@ footer div ul li a {
         padding: 20px 0 0 0;
     }
     #searchContent {
-        padding: 35px 0 0 20px;
+        padding: 35px 5px 0 20px;
     }
     #searchContent h1 {
         margin: 0;
@@ -643,6 +665,9 @@ footer div ul li a {
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
     /* activityContent */
+    #mainContent, #activityContent {
+        padding-left: 3%;
+    }
     .one, .two, .three, .four, .five {
         width: 90%;
     }
