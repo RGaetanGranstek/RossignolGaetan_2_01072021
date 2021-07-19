@@ -629,9 +629,6 @@ footer div ul li a {
     #contentRight>div:first-of-type {
         width: 100%;
     }
-    #contentRight {
-        padding: 0 20px;
-    }
     /* End mainContent */
 }
 /* End tablet low resolution */
@@ -645,7 +642,8 @@ footer div ul li a {
         background-color: white;
     }
     #contentRight {
-        margin: 0 auto;
+        margin: 0;
+        padding: 0 20px;
     }
     /* End mainContent */
 }
@@ -669,7 +667,7 @@ footer div ul li a {
 @media screen and (min-width: 768px) and (max-width: 1439px) {
     /* activityContent */
     #mainContent, #activityContent {
-        padding-left: 3%;
+        padding: 0 3%;
     }
     .one, .two, .three, .four, .five {
         width: 90%;
