@@ -629,7 +629,7 @@ footer div ul li a {
     #contentRight>div:first-of-type {
         width: 100%;
     }
-    #mainContent {
+    #contentRight {
         padding: 0 20px;
     }
     /* End mainContent */
