@@ -17,10 +17,13 @@ section {
 /* End transition */
 body {
     margin: auto;
-    max-width: 1440px;
     font-family: 'Raleway', Verdana, Tahoma, sans-serif;
     font-size: 1em;
     background-color: white;
+}
+header, section {
+    max-width: 1440px;
+    margin: auto;
 }
 #barreDeTitre, #searchContent {
     padding-left: 55px;
@@ -422,32 +425,37 @@ input::placeholder {
 /* End activityContent */
 /* footer */
 footer {
-    display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--Grey);
+    justify-content: center;
 }
-footer a:hover {
+footer>div {
+    display: grid;
+    margin: auto;
+    max-width: 1440px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+footer>div a:hover {
     text-decoration: underline;
 }
-footer h3 {
+footer>div h3 {
     margin: 0;
 }
-footer div:first-child {
+footer>div div:first-child {
     margin: 50px auto auto 50px;
 }
-footer div {
+footer>div div {
     margin: 50px auto auto 20px;
 }
-footer div ul {
+footer>div div ul {
     padding: 0;
     list-style: none;
     text-decoration: none;
 }
-footer div ul li {
+footer>div div ul li {
     padding-bottom: 15px;
 }
-footer div ul li a {
+footer>div div ul li a {
     font-weight: 500;
     color: black;
 }
@@ -503,13 +511,6 @@ footer div ul li a {
     /* End searchBar */
     /* End searchContent */
 }
-@media screen and (min-width: 321px) and (max-width: 480px) {
-    /* mainContent */
-    #contentRight {
-        padding: 10px 5px 30px 5px;
-    }
-    /* End mainContent */
-}
 @media screen and (min-width: 340px) and (max-width: 590px) {
     /* mainContent */
     .mainLinkLeft, .mainLinkLeft a {
@@ -555,12 +556,15 @@ footer div ul li a {
     .mainLinkLeft {
         margin: 0 auto 30px auto;
     }
+    #contentRight {
+        padding: 10px 20px 30px 20px;
+    }
     /* End mainContent */
     /* footer */
-    footer {
+    footer>div {
         display: inherit;
     }
-    footer div {
+    footer>div div {
         padding: 12px 0 0 30px;
         margin: 0;
     }
@@ -782,11 +786,11 @@ footer div ul li a {
     /* End infoSearch */
     /* End searchContent */
     /* footer */
-    footer div:first-child {
+    footer>div>div:first-child {
         padding: 50px 0 12px 30px;
         margin: 0;
     }
-    footer div:last-of-type {
+    footer>div>div:last-of-type {
         padding-bottom: 19px;
     }
     /* End footer */
