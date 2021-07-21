@@ -472,9 +472,6 @@ footer div ul li a {
     #contentRight {
         padding: 5px;
     }
-    #contentRight img, .mainLinkRight a {
-        width: auto;
-    }
     .mainLinkLeft, .mainLinkLeft a {
         width: 280px;
     }
