@@ -39,7 +39,6 @@ header, section {
 /* header */
 #barreDeTitre {
     margin-bottom: 30px;
-    /* height: 100px; */
     display: flex;
     justify-content: space-between;
 }
