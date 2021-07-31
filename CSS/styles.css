@@ -323,7 +323,6 @@ input::placeholder {
     border: solid 5px white;
     display: block;
     object-fit: cover;
-    overflow: hidden;
 }
 #contentLeft img {
     height: 115px; 
