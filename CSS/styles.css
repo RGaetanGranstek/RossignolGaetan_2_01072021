@@ -49,10 +49,8 @@ header, section {
     padding: 45px 0 5px 0;
 }
 #mainNav {
-    height: 100%;
     list-style: none;
     display: flex;
-    align-items: center;
 }
 a, a:active, a:visited, a:link {
     color: black;
