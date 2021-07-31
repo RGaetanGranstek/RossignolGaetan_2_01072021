@@ -280,7 +280,6 @@ input::placeholder {
 #contentLeft>div:first-of-type, #contentRight>div:first-of-type {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
 }
 #contentLeft>div:first-of-type {
     justify-content: space-around;
@@ -290,13 +289,11 @@ input::placeholder {
     justify-content: space-between;
 }
 .mainLinkLeft {
-    width: 245px;
     height: 200px;
     margin-bottom: 30px;
 }
 .mainLinkRight a {
     width: 345px;
-    /* width: 100%; */
     height: 145px;
     margin-top: 30px;
 }
