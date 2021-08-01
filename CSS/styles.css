@@ -371,7 +371,7 @@ input::placeholder {
 .two, .three {
     grid-column: 2;
 }
-.three {
+.three, .six {
     align-self: flex-end;
 }
 .three, .three img {
@@ -388,10 +388,7 @@ input::placeholder {
 }
 .five, .six {
     grid-column: 4;
-  }
-.six {
-      align-self: flex-end;
-    }
+}
 .six, .six img {
     height: 205px;
 }
