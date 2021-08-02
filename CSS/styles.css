@@ -22,7 +22,7 @@ body {
     background-color: white;
 }
 header, section {
-    max-width: 1440px;
+    max-width: 1340px;
     margin: auto;
 }
 #barreDeTitre, #searchContent {
@@ -287,6 +287,7 @@ input::placeholder {
 }
 #contentRight>div:first-of-type {
     justify-content: space-between;
+    align-items: flex-end;
 }
 .mainLinkLeft {
     height: 200px;
