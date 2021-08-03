@@ -462,6 +462,22 @@ footer>div div ul li a {
 
 
 
+@media screen and (max-width: 375px) {
+    .mainLinkLeft, .mainLinkLeft a, .mainLinkRight, .mainLinkRight a, #activityContent, #contentLeft img {
+        max-width: 280px;
+    }
+    #contentLeft img {
+        max-width: 270px;
+    }
+    .mainLinkRight a>div {
+        padding: 5px 3% 5px 5px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .buttonMobile {
+        display: none;
+    }
+}
 @media screen and (max-width: 800px) {
     /* mainContent */
     #mainContent {
@@ -671,9 +687,6 @@ footer>div div ul li a {
     .mainLinkRight h3 {
         font-size: 0.9em;
     }
-    .mainLinkRight a>div {
-        padding: 10px 35px 15px 10px;
-    }
     /* End mainContent */
     /* activityContent */
     #activityContent>div {
@@ -719,10 +732,4 @@ footer>div div ul li a {
         font-weight: 600;
     }
     /* End activityContent */
-}
-/* Mobile high resolution and Tablet */
-@media screen and (min-width: 768px) {
-    .buttonMobile {
-        display: none;
-    }
 }
