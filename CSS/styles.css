@@ -690,9 +690,6 @@ footer>div div ul li a {
     .one img, .two img, .three img, .four img, .five img, .six img, .boxImg div {
         width: 100%;
     }
-    .one, .one img {
-        height: 445px;
-    }
     .two, .two img, .three, .three img, .four, .four img, .five, .five img {
         height: 200px;
     }
