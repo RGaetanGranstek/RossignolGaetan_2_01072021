@@ -462,7 +462,9 @@ footer>div div ul li a {
 
 
 
-@media screen and (max-width: 375px) {
+
+ /* mobile and (tablet low resolution) */
+@media screen and (max-width: 374px) {
     .mainLinkLeft, .mainLinkLeft a, .mainLinkRight, .mainLinkRight a, #activityContent, #contentLeft img {
         max-width: 280px;
     }
@@ -564,6 +566,8 @@ footer>div div ul li a {
     }
     /* End footer */
 }
+/* End mobile and (tablet low resolution) */
+/* tablet and (laptop low resolution) */
 @media screen and (max-width: 1024px) {
     /* header */
     #barreDeTitre {
@@ -647,6 +651,8 @@ footer>div div ul li a {
     }
     /* End footer */
 }
+/* End tablet and (laptop low resolution) */
+/* laptop and (desktop low resolution) */
 @media screen and (max-width: 1320px) {
     /* mainContent */
     #mainContent {
@@ -733,3 +739,4 @@ footer>div div ul li a {
     }
     /* End activityContent */
 }
+/* End laptop and (desktop low resolution) */
